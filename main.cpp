@@ -40,10 +40,10 @@ int main() {
     f_writeResults(outputFile, mseValues, numGrids, bestIndex, allGridsMatrix, cols, bestMSE);
 
     saveDataForPlot("plot.txt", knownMatrix, &allGridsMatrix[2 * bestIndex], cols);
-    generatePythonScript("plot_script.py", "plot.txt", "grid.png", "Grid Match Visualization");
+    generatePythonScript("plot_script.py", "plot.txt", "plot.png", "Grid Match Visualization");
 
     cout << "Matching complete. Results saved to '" << outputFile << "'." << endl;
-    cout << "Plot will be generated as 'grid.png' after running plot_script.py." << endl;
+    cout << "Plot will be generated as 'plot.png' after running plot_script.py." << endl;
 
     delete[] mseValues;
     f_deleteMatrix(knownMatrix, knownLines);
